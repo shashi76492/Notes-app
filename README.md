@@ -20,5 +20,5 @@ Follow these steps to set up the Notes App on your local machine:
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/notes-app.git
+   git clone https://github.com/shashi76492/Notes-app.git
    cd notes-app2Install Dependencies:
