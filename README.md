@@ -22,3 +22,6 @@ Follow these steps to set up the Notes App on your local machine:
    ```bash
    git clone https://github.com/shashi76492/Notes-app.git
    cd notes-app2Install Dependencies:
+2. **Install Dependencies**
+3. **Configure Auth0**
+4. **Run the App**
