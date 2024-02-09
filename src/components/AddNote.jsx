@@ -2,18 +2,14 @@ import { useEffect, useState } from "react";
 import { FaPlus } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
 
-
 const AddNote = ({ handleAddNote }) => {
   const [text, setText] = useState("");
   const [count, setCount] = useState(200);
   const [addDiv, setAddDiv] = useState(false);
 
-
-
   const handleChange = (e) => {
-  
     const newText = e.target.value;
-    setText(newText)
+    setText(newText);
     setCount(200 - newText.length);
   };
 
@@ -21,9 +17,8 @@ const AddNote = ({ handleAddNote }) => {
     handleAddNote(text);
     setText("");
     setCount(200);
-    setAddDiv(!addDiv)
+    setAddDiv(!addDiv);
   };
-
 
   const handleClick = () => {
     setAddDiv(!addDiv);
@@ -32,10 +27,20 @@ const AddNote = ({ handleAddNote }) => {
   return (
     <>
       {addDiv ? (
-          <div className="Add-Note show"   >
-          <ImCross  style={{marginLeft:"98%", marginTop:"0%" , width:"30px" , color:"#fff" , cursor:"pointer" , color:"#252525"}} onClick={handleClick} />
+        <div className="Add-Note show">
+          <ImCross
+            style={{
+              marginLeft: "98%",
+              marginTop: "0%",
+              width: "30px",
+              color: "#fff",
+              cursor: "pointer",
+              color: "#252525",
+            }}
+            onClick={handleClick}
+          />
           <textarea
-          style={{color:"black", whiteSpace:"pre-wrap"}}
+            style={{ color: "black", whiteSpace: "pre-wrap" }}
             rows="8"
             columns="10"
             placeholder="Type to add a note... "
@@ -53,7 +58,7 @@ const AddNote = ({ handleAddNote }) => {
         <></>
       )}
       <div className="addNote">
-        <FaPlus size={30} onClick={handleClick}  />
+        <FaPlus size={30} onClick={handleClick} />
       </div>
     </>
   );

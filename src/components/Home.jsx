@@ -4,14 +4,15 @@ import { nanoid } from "nanoid";
 import "bootstrap/dist/css/bootstrap.min.css";
 import NavBar from "./NavBar";
 
+function Home({ user }) {
+  const currentDate = new Date();
+  const formattedDate = `${currentDate.getFullYear()}-${(
+    currentDate.getMonth() + 1
+  )
+    .toString()
+    .padStart(2, "0")}-${currentDate.getDate().toString().padStart(2, "0")}`;
 
-
-function Home({user}) {
-
-  const currentDate = new Date()
-  const formattedDate =  `${currentDate.getFullYear()}-${(currentDate.getMonth() + 1).toString().padStart(2, '0')}-${currentDate.getDate().toString().padStart(2, '0')}`;
-  
-const localStorageKey = `${user.name}`;
+  const localStorageKey = `${user.name}`;
 
   const getLocalStorage = () => {
     const data = localStorage.getItem(localStorageKey);
@@ -47,7 +48,6 @@ const localStorageKey = `${user.name}`;
   };
 
   const addNote = (inputText) => {
-    
     setNotes([
       ...notes,
       {

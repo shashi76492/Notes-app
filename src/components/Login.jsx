@@ -26,8 +26,7 @@ const Login = () => {
                 "Swift. Smart. Simple.",
                 "Capture Ideas, Anywhere.",
                 "Scribe. Sync. Simplify.",
-                "Swift Notes, Big Ideas."
-
+                "Swift Notes, Big Ideas.",
               ],
               autoStart: true,
               loop: true,
